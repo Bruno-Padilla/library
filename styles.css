@@ -27,6 +27,7 @@ header {
     align-items: center;
 }
 
+
 /* - - - - - BOOK - - - - - */
 /* Book */
 .book {
@@ -48,7 +49,7 @@ header {
     place-items: center;
 }
 
-.book .cover .btn {
+.book .cover .btn-addBook {
     color: whitesmoke;
     border-radius: 50%;
     border: none;
@@ -57,7 +58,7 @@ header {
     color: black;
 }
 
-.book .cover .btn .icon {
+.book .cover .btn-addBook .icon {
     width: 80px;
     height: 80px;
 }
@@ -84,4 +85,89 @@ header {
     width:fit-content;
     padding: 3px 15px;
     border-radius: 15px;
+}
+
+
+/* - - - - - FORM - - - - - */
+form {
+    width: 500px;
+    height: 550px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    font-size: 23px;
+}
+
+form .header {
+    text-align: center;
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+    position: relative;
+}
+
+form .header .btn-closeForm {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+form .title,
+form .author,
+form .category,
+form .pages {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+}
+
+form .title span,
+form .author span,
+form .category span,
+form .pages span {
+    display: grid;
+    align-items: center;
+    padding-left: 11%;
+}
+
+form .title input,
+form .author input,
+form .category input,
+form .pages input {
+    height: fit-content;
+    width: 60%;
+    font-size: 23px;
+    align-self: center;
+    justify-self: end;
+    padding: 3% 5%;
+    border-radius: 12px;
+    margin: 0 5%;
+}
+
+form .readed {
+    display: flex;
+    align-items: center;
+}
+
+form .readed input {
+    width: 25px;
+    height: 25px;
+    margin: 0 3%;
+    cursor: pointer;
+}
+
+form .submit {
+    display: grid;
+    justify-content: center;
+    align-items: start;
+}
+
+form .submit .btn-submit {
+    font-size: 23px;
+    padding: 10px 70px;
+    border-radius: 8px;
+    cursor: pointer;
 }
