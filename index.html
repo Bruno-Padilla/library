@@ -36,22 +36,29 @@
 
             <div class="title">
                 <span>Title</span>
-                <input type="text">
+                <input type="text" required pattern="[A-Za-z]+" placeholder="The best book ever">
             </div>
 
             <div class="author">
                 <span>Author</span>
-                <input type="text">
+                <input type="text" required pattern="[A-Za-z]+" placeholder="Of course me">
             </div>
 
             <div class="category">
                 <span>Category</span>
-                <input type="text">
+
+                <select name="" id="" required>
+                    <option value="" selected disabled>Select a category</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="scifi">Science Fiction</option>
+                    <option value="mistery">Mistery</option>
+                    <option value="action">Action</option>
+                </select>
             </div>
 
             <div class="pages">
                 <span>No. pages</span>
-                <input type="number" min="1">
+                <input type="number" min="1" required pattern="[0-9]+" placeholder="###">
             </div>
 
             <div class="readed">
@@ -61,7 +68,7 @@
             </div>
 
             <div class="submit">
-                <button class="btn-submit">Submit</button>
+                <button class="btn-submit" type="submit">Submit</button>
             </div>
         </form>
     </body>
