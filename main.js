@@ -1,12 +1,12 @@
 /* - - - - - HTML ELEMENTS - - - - - */
-let btnAddBook = document.querySelector(".btn-addBook");
+const btnAddBook = document.querySelector(".btn-addBook");
+const newBookForm = document.querySelector(".formDialog");
+const closeNewBookForm = document.querySelector(".formDialog .header .btn-closeForm");
 
 
 /* - - - - - EVENTS - - - - - */
-btnAddBook.onclick = displayForm;
+btnAddBook.onclick = () => newBookForm.showModal();
+closeNewBookForm.onclick = () => newBookForm.close();
 
 
 /* - - - - - FUNCTIONS - - - - - */
-function displayForm() {
-    alert("lolo");
-}
