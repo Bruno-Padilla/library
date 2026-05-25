@@ -28,9 +28,21 @@ header {
 }
 
 
+/* - - - - - BOOKS WRAPPER - - - - - */
+.books-wrapper {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    place-content: center;
+    place-items: center;
+    gap: 100px;
+}
+
+
 /* - - - - - BOOK - - - - - */
 /* Book */
-.book {
+.addBook, .book {
     width: 350px;
     height: 450px;
     display: flex;
@@ -40,6 +52,7 @@ header {
 }
 
 /* Cover */
+.addBook .cover,
 .book .cover {
     height: 100%;
     background-color: #A77F60;
@@ -49,7 +62,7 @@ header {
     place-items: center;
 }
 
-.book .cover .btn-addBook {
+.addBook .cover .btn-addBook {
     color: whitesmoke;
     border-radius: 50%;
     border: none;
@@ -59,12 +72,13 @@ header {
     cursor: pointer;
 }
 
-.book .cover .btn-addBook .icon {
+.addBook .cover .btn-addBook .icon {
     width: 80px;
     height: 80px;
 }
 
 /* Info */
+.addBook .info,
 .book .info {
     height: 100%;
     background-color: white;
@@ -74,18 +88,50 @@ header {
     padding: 3% 4.5%;
     font-size: 30px;
     border-radius: 0 0 5% 0;
+    gap: 20px;
 }
 
-.book .info .title, 
-.book .info .author,
-.book .info .category,
-.book .info .pages {
+.addBook .info .title, 
+.addBook .info .author,
+.addBook .info .category,
+.addBook .info .pages,
+.book .info .title {
     background-color: rgb(215, 215, 215);
     color: rgb(215, 215, 215);
     align-self: center;
     width:fit-content;
     padding: 3px 15px;
     border-radius: 15px;
+}
+
+.book .info .title {
+    background-color: black;
+    color: white;
+}
+
+.book .info .category {
+    color: gray;
+}
+
+.book .info .pages {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.book .info .pages .buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.book .info .pages .buttons button svg {
+    width: 30px;
+    height: 30px;
+}
+
+
+.book .info .pages .delete-btn {
+    color: red;
 }
 
 
